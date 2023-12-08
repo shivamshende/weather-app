@@ -8,7 +8,7 @@ function createPropertyElement(key, value, parentElement) {
     parentElement.appendChild(propertyElement);
 }
 
-function fetchData(location){
+function fetchData(location) {
     const url = `https://weatherapi-com.p.rapidapi.com/current.json?q=${location}`;
     const options = {
         method: 'GET',
@@ -18,55 +18,49 @@ function fetchData(location){
         }
     };
 
-fetch(url, options)
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(result => {
-        const currentDataElement = document.getElementById('currentData');
-        const currentElement = currentDataElement.querySelector('.current');
-        const locationElement = currentDataElement.querySelector('.location');
-        const weatherImage = document.getElementById('weatherImage')
-        const windElement = currentDataElement.querySelector('.wind')
-        const timeElement = currentDataElement.querySelector('.time')
-        const humidityElement = currentDataElement.querySelector('.humidity')
-        const conditionElement = currentDataElement.querySelector('.condition')
+    fetch(url, options)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(result => {
+            const currentDataElement = document.getElementById('currentData');
+            const currentElement = currentDataElement.querySelector('.current');
+            const locationElement = currentDataElement.querySelector('.location');
+            const weatherImage = document.getElementById('weatherImage')
+            const windElement = currentDataElement.querySelector('.wind')
+            const timeElement = currentDataElement.querySelector('.time')
+            const humidityElement = currentDataElement.querySelector('.humidity')
+            const conditionElement = currentDataElement.querySelector('.condition')
 
-        // Display current weather data
-        createPropertyElement('Temperature', `${result.current.temp_c}°C`, currentElement)
-        // Add more properties as needed
+            // Displaying current weather data
+            createPropertyElement('Temperature', `${result.current.temp_c}°C`, currentElement)
 
-        // Display location data
-        createPropertyElement('Location', result.location.name, locationElement);
-        createPropertyElement('Country', result.location.country, locationElement);
-        // Add more properties as needed
+            // Displaying location data
+            createPropertyElement('Location', result.location.name, locationElement);
+            createPropertyElement('Country', result.location.country, locationElement);
 
-        //for condition image
-        // const weatherImageUrl = result.current.condition.icon;
-        // weatherImage.src = weatherImageUrl;
-
-        createPropertyElement('wind speed', `${result.current.wind_kph}kp/h`, windElement)
-        createPropertyElement('localTime', result.location.localtime, timeElement)
-        createPropertyElement('Humidity', `${result.current.humidity}%`, humidityElement)
-
-        createPropertyElement('Condition', result.current.condition.text, conditionElement)
-    })
-    .catch(error => {
-        console.error(error);
-    });
+            //Displaying more weather data as you needed
+            createPropertyElement('wind speed', `${result.current.wind_kph}kp/h`, windElement)
+            createPropertyElement('localTime', result.location.localtime, timeElement)
+            createPropertyElement('Humidity', `${result.current.humidity}%`, humidityElement)
+            createPropertyElement('Condition', result.current.condition.text, conditionElement)
+        })
+        .catch(error => {
+            console.error(error);
+        });
 }
 
-function showData(){
+function showData() {
     const location = locationInput.value
-    if(location){
+    if (location) {
         fetchData(location)
     }
     document.getElementById('note').innerHTML = "Refresh the page first for next location"
 }
 
-searchButton.addEventListener("click", function(){
+searchButton.addEventListener("click", function () {
     showData()
 })

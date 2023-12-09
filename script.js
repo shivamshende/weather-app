@@ -61,6 +61,12 @@ function showData() {
     document.getElementById('note').innerHTML = "Refresh the page first for next location"
 }
 
+locationInput.addEventListener("keydown", function(event){
+    if(event.key === 'Enter'){
+        showData()
+    }
+})
+
 searchButton.addEventListener("click", function () {
     showData()
 })

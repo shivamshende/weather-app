@@ -1,6 +1,8 @@
 const locationInput = document.getElementById('locationInput')
 const searchButton = document.getElementById('searchButton')
 
+locationInput.focus()
+
 function createPropertyElement(key, value, parentElement) {
     const propertyElement = document.createElement('div');
     propertyElement.classList.add('property');

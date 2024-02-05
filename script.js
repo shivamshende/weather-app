@@ -31,20 +31,19 @@ function fetchData(location) {
             const currentDataElement = document.getElementById('currentData');
             const currentElement = currentDataElement.querySelector('.current');
             const locationElement = currentDataElement.querySelector('.location');
-            const weatherImage = document.getElementById('weatherImage')
             const windElement = currentDataElement.querySelector('.wind')
             const timeElement = currentDataElement.querySelector('.time')
             const humidityElement = currentDataElement.querySelector('.humidity')
             const conditionElement = currentDataElement.querySelector('.condition')
 
-            // Displaying current weather data
+            // current weather data
             createPropertyElement('Temperature', `${result.current.temp_c}°C`, currentElement)
 
-            // Displaying location data
+            // location data
             createPropertyElement('Location', result.location.name, locationElement);
             createPropertyElement('Country', result.location.country, locationElement);
 
-            //Displaying more weather data as you needed
+            //yuo can display more weather data from api as you needed
             createPropertyElement('wind speed', `${result.current.wind_kph}kp/h`, windElement)
             createPropertyElement('localTime', result.location.localtime, timeElement)
             createPropertyElement('Humidity', `${result.current.humidity}%`, humidityElement)

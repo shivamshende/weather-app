@@ -3,7 +3,7 @@
 
 1. [About the Project](#about-the-project)
    - [Description](#description)
-   - [Features]{#features}
+   - [Features](#features)
    - [Project Access](#project-access)
    - [Installation](#installation)
 

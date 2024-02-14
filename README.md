@@ -3,26 +3,17 @@
 
 1. [About the Project](#about-the-project)
    - [Description](#description)
-
-2. [Getting Started](#getting-started)
-   - [Prerequisites](#prerequisites)
+   - [Features]{#features}
+   - [Project Access](#project-access)
    - [Installation](#installation)
-
-3. [Folder Structure](#folder-structure)
 
 4. [Skills](#skills)
 
-5. [Help / Troubleshooting](#help--troubleshooting)
-   - [Common Issues and Solutions](#common-issues-and-solutions)
-   - [Getting Further Assistance](#getting-further-assistance)
-   - [Additional Tips](#additional-tips)
-
-6. [Author / Contributors](#author--contributors)
+5. [Author / Contributors](#author--contributors)
    - [Contact](#contact)
 
-7. [License](#license)
+6. [License](#license)
    - [About the License](#about-the-license)
-   - [How to Contribute](#how-to-contribute)
 </details>
 
 # About the Project

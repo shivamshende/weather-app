@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -40,7 +40,56 @@
 
             <div class="humidity"></div>
         </div>
-        <p id="note"></p>
+    </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="weather-card">
+        <h2>Weather App <img src="icons/weather.jfif" alt="weather icon"></h2>
+        <div class="search-form">
+            <input type="text" class="search-box" id="locationInput" placeholder="Enter any place" list="suggestions">
+            <button class="material-symbols-outlined" id="searchButton">
+                Search
+            </button>
+            <datalist id="suggestions"></datalist>
+        </div>
+        <div class="Data" id="currentData">
+            <div class="condition-with-image">
+                <div class="condition"></div>
+                <div class="condition-image" id="weatherIcon"></div>
+            </div>
+
+            <div class="location">
+                <h5>Location:</h5>
+            </div>
+
+            <div class="time"></div>
+
+            <div class="current">
+                <h5>Weather:</h5>
+            </div>
+
+            <div class="wind"></div>
+
+            <div class="humidity"></div>
+        </div>
+        <!-- <p id="note"></p> -->
     </div>
 </body>
 </html>

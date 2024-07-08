@@ -1,4 +1,4 @@
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +10,7 @@ body{
     background-size: cover;
 }
 
-.weather-card{
+.weather-card {
     background: #000000d0;
     color: white;
     padding: 2em;
@@ -21,30 +21,35 @@ body{
     padding-bottom: 1px;
 }
 
-.weather-card h2{
+h5 {
+    color: yellow;
+}
+
+.weather-card h2 {
     font-family: 'Satisfy', cursive;
     display: flex;
     justify-content: center;
 }
 
-.weather-card h2 img{
+.weather-card h2 img {
     height: 30px;
     margin-top: 7px;
     margin-left: 15px;
 }
 
-.Data{
+.Data {
     max-height: 400px;
     overflow: auto;
+    padding-bottom: 25px;
 }
 
-.search-form{
+.search-form {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-button{
+button {
     margin: 0.5em;
     border-radius: 50%;
     border: none;
@@ -57,11 +62,11 @@ button{
     transition: 0.2s ease-in-out;
 }
 
-button:hover{
+button:hover {
     background: #7c7c7c6b;
 }
 
-input.search-box{
+input.search-box {
     border: none;
     outline: none;
     padding: 0.4em 1em;
@@ -73,22 +78,17 @@ input.search-box{
     width: calc(100% - 100px)
 }
 
-h1.temp{
+h1.temp {
     margin: 0;
     margin-bottom: 0.4em;
 }
 
-.description{
+.description {
     text-transform: capitalize;
     margin-left: 8px;
 }
 
-.condition-with-image{
+/* .condition-with-image {
     display: flex;
     align-items: center;
-}
-
-#note{
-    color: rgb(45, 194, 45);
-    text-align: center;
-}
+} */

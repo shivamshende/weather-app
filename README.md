@@ -62,7 +62,7 @@ This project showcases the use of various technologies and skills, including:
 
 - **Event Handling:** Used to handle user interactions such as clicking a button or pressing Enter in the search box.
 
-- **API Intigration:**  Integrated the WeatherAPI to fetch real-time weather data for a specified location.
+- **API Intigration:**  Integrated the WeatherAPI to fetch real-time weather data and API for location suggestions.
 
 - **Git:** Used for version control and collaboration, allowing for easy sharing and updating of the project code.
 
